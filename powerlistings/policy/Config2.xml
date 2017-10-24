@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace Templet="normal" version="1.0">
+
+<RMI Servers="10.142.66.33:1101" />
+
+
+
+
+<Weight>
+<DocumentScore weight="0.8"/>
+<LayerScore weight="0.2"/>
+</Weight>
+</Workspace>
