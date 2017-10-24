@@ -61,14 +61,7 @@ public class MongoWriter {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	public void writeOrder(String requestStr) {
 
@@ -78,7 +71,10 @@ public class MongoWriter {
 		String sogouCates = Tools.getCategoryMap().get(yextCates);
 
 		/*
-		 * bean--------(有 partnerId)-------"U" | | -----(没有 partnerId)-----"A"
+		 * bean--------(有 partnerId)-------"U" 
+		 * 	      | 
+		 *        | 
+		 *        -----(没有 partnerId)-----"A"
 		 */
 
 		// 2.根据情况求解 dataid 和 uid （uid 即 uniqueid）
@@ -241,8 +237,11 @@ public class MongoWriter {
 		}
 
 		/*
-		 * supress_____(true)____>canonicalListingId___(存在)___> R | | |
-		 * |___(为空)___> D | |__(false)___> S
+		 * supress_____(true)____>canonicalListingId___(存在)___> R 
+		 *      |                                |
+		 *      |__(false)___> S                 |
+		 *                                       |
+		 *                                       |___(为空)___> D 
 		 */
 		if (bean.suppress == true) {
 			if (bean.canonicalListingId == null) {
